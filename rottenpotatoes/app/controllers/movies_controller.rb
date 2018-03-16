@@ -11,6 +11,9 @@ class MoviesController < ApplicationController
   end
 
   def same_director
+    @movie = Movie.find(params[:id])
+    director = @movie.director
+    @movies = Movie.where(Director: director)
   end
 
   def index
