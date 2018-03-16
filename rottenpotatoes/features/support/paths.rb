@@ -20,7 +20,7 @@ module NavigationHelpers
       edit_movie_path Movie.find_by_title($1) #where $1 is what is caught by "(.*)"
 
     when /^the details page for "(.*)"$/
-      edit_movie_path Movie.find_by_title($1) #where $1 is what is caught by "(.*)"
+      movie_path Movie.find_by_title($1) #where $1 is what is caught by "(.*)"
 
     when /^the Similar Movies Page"(.*)"$/
       same_director_path Movie.find_by_title($1) #where $1 is what is caught by "(.*)"
