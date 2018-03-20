@@ -14,15 +14,18 @@ class MoviesController < ApplicationController
       @all_ratings = Movie.all_ratings
       @selected_ratings = params[:ratings] || session[:ratings] || {}
 
-    @movie = Movie.find(params[:id])
-    movieDirector = @movie.director
+      @movie = Movie.find(params[:id])
 
-      if movieDirector.empty? then
+      if movieHasDirector?(@movie) then
+        @movies = Movie.where(Director: @movie.director)
+      else
         flash[:notice] = "'#{@movie.title}' has no director info"
         redirect_to movies_path
-      else
-        @movies = Movie.where(Director: movieDirector)
       end
+  end
+
+  def movieHasDirector?(movie)
+    ! movie.director.empty?
   end
 
   def index
