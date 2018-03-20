@@ -3,6 +3,7 @@
 # This file is used by web_steps.rb, which you should also delete
 #
 # You have been warned
+#JH: WHO WROTE THIS??
 module NavigationHelpers
   # Maps a name to a path. Used by the
   #
@@ -23,7 +24,7 @@ module NavigationHelpers
       movie_path Movie.find_by_title($1) #where $1 is what is caught by "(.*)"
 
     when /^the Similar Movies page for "(.*)"$/
-      same_director_path Movie.find_by_title($1) #where $1 is what is caught by "(.*)"
+      similar_director_path Movie.find_by_title($1) #where $1 is what is caught by "(.*)"
 
     when /the RottenPotatoes homepage/ then '/movies'
 

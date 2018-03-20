@@ -1,7 +1,7 @@
 Feature: Create
 
 As a user
-I want to be able to create a movie
+I want to create a movie
 So that I can add to my catalogue
 
 Background: Movies in Database

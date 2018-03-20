@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
     # will render app/views/movies/show.<extension> by default
   end
 
-  def same_director
+  def similar_director
     @movie = Movie.find(params[:id])
     movieDirector = @movie.director
 
