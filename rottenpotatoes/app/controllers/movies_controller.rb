@@ -11,6 +11,9 @@ class MoviesController < ApplicationController
   end
 
   def similar_director
+      @all_ratings = Movie.all_ratings
+      @selected_ratings = params[:ratings] || session[:ratings] || {}
+
     @movie = Movie.find(params[:id])
     movieDirector = @movie.director
 

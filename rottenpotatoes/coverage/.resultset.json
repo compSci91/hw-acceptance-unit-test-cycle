@@ -4,7 +4,7 @@
       "/Users/JoshuaHowell/Desktop/Texas A&M/Software_Engineering/HW3/hw-acceptance-unit-test-cycle/rottenpotatoes/app/models/movie.rb": [
         1,
         1,
-        3,
+        5,
         null,
         null
       ],
@@ -22,6 +22,9 @@
         null,
         null,
         1,
+        2,
+        2,
+        null,
         2,
         2,
         null,
@@ -104,6 +107,6 @@
         null
       ]
     },
-    "timestamp": 1521561150
+    "timestamp": 1521562224
   }
 }
