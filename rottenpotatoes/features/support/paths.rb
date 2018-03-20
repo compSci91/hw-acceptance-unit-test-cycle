@@ -13,11 +13,11 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the home\s?page$/
+    when /^the home page$/
       '/movies'
 
-    when /^the edit page for "(.*)"$/
-      edit_movie_path Movie.find_by_title($1) #where $1 is what is caught by "(.*)"
+    when /^the edit page for "(.*)"$/ #when this regex is matched
+      edit_movie_path Movie.find_by_title($1) #execute this code (where $1 is what is caught by "(.*)")
 
     when /^the details page for "(.*)"$/
       movie_path Movie.find_by_title($1) #where $1 is what is caught by "(.*)"
@@ -26,8 +26,6 @@ module NavigationHelpers
       same_director_path Movie.find_by_title($1) #where $1 is what is caught by "(.*)"
 
     when /the RottenPotatoes homepage/ then '/movies'
-
-    when /^the movies page$/ then '/movies'
 
 
     # Add more mappings here.
